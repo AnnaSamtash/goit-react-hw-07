@@ -2,7 +2,7 @@ import css from './Contact.module.css';
 import { IoPersonSharp } from 'react-icons/io5';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/contactsSlice';
+import { deleteContact } from '../../redux/contactsOps';
 import Button from '../Button/Button';
 
 export default function Contact({ name, number, id }) {
@@ -22,7 +22,9 @@ export default function Contact({ name, number, id }) {
           {number}
         </p>
       </div>
-      <Button onClick={handleDelete}>Delete</Button>
+      <Button onClick={handleDelete} style={{ margin: 0 }}>
+        Delete
+      </Button>
     </div>
   );
 }

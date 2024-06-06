@@ -1,13 +1,13 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useId } from 'react';
 import * as Yup from 'yup';
-import { addContact } from '../../redux/contactsSlice';
+import { addContact } from '../../redux/contactsOps';
 import Button from '../Button/Button';
 import css from './ContactForm.module.css';
 import { useDispatch } from 'react-redux';
 
 export default function ContactForm() {
-  const phoneRegExp = /^\d{3}-\d{2}-\d{2}$/;
+  const phoneRegExp = /^\d{3}-\d{3}-\d{4}$/;
   const ContactFormSchema = Yup.object().shape({
     name: Yup.string()
       .min(3, 'Too Short!')
