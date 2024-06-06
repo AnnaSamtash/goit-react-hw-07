@@ -7,7 +7,7 @@ export default function Loader() {
       <Circles
         height="300"
         dth="300"
-        color="rgb(152, 253, 143"
+        color="beige"
         ariaLabel="circles-loading"
         wrapperStyle={{}}
         wrapperClass=""
